@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00b7ff;
+}
+
+.lista_anuncios li {
+    padding-bottom: 20px;
+}
+
+.foto_anuncio-container {
+    width: 300px;
+    height: auto;
+}
+
+.foto_anuncio {
+    margin-top: 10px;
+    max-width: 100%;
+    object-fit: cover;
 }
