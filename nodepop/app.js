@@ -3,6 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const i18n = require("./lib/i18nConfigure");
 
 // Conecta a la bbdd al ejecutar
 require("./lib/connectMongoose");
@@ -28,7 +29,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// Rutas del API
 app.use("/api/anuncios", require("./routes/api/anuncios"));
+
+// Rutas del website
+app.use(i18n.init);
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 
