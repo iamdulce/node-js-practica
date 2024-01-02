@@ -9,13 +9,19 @@ API y website simple
 Node.js
 MongoDB
 
-### Instalación:
+### Instalación de dependencias:
 
 ```sh
 $ npm install
 ```
 
 Revisa la conexión a la base de datos en /lib/connectMongoose.js (ver "Iniciar un servidor MongoDB en MacOS o Linux")
+
+### Incia un servidor MongoDB
+
+```sh
+./bin/mongod --dbpath ./data/
+```
 
 ### Inicia la BBDD:
 
@@ -48,6 +54,18 @@ Crear Anuncios
 
 `POST /api/anuncios`
 
-Filtrar
+Filtrar/Ordenar Anuncios:
 
-``
+-   Filtros por tag, nombre, venta, precio:
+
+`GET /api/anuncios?tags=mobile`
+
+`GET /api/anuncios?nombre=Bicicleta`
+
+`GET /api/anuncios?venta=true`
+
+`GET /api/anuncios?precio=150`
+
+-   Orden de Anuncios (Ej: por precio, mayor a menor):
+
+`GET /api/anuncios?sort=-precio`

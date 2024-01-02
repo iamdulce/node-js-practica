@@ -7,20 +7,36 @@
     <body>
         <h1><%= title %></h1>
         <p>Welcome to <%= title %></p>
-        <ul class="lista_anuncios">
-            <% listaDeAnuncios.forEach(function(anuncio){ %>
-            <li>
-                <%= anuncio.nombre %>
-                <span> <b><%= anuncio.precio %>€</b></span>
-                <span> [<%= anuncio.tags %>] </span>
-                <div class="foto_anuncio-container">
-                    <img
-                        class="foto_anuncio"
-                        src="/images/<%= anuncio.foto %>"
-                    />
-                </div>
-            </li>
-            <% }); %>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Venta</th>
+                    <th style="text-align: right">Precio</th>
+                    <th>Foto</th>
+                    <th>Tags</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% listaDeAnuncios.forEach(function(anuncio) { %>
+                <tr>
+                    <td><%= anuncio.nombre %></td>
+                    <td><%= anuncio.venta ? 'Si' : 'No' %></td>
+                    <td style="text-align: right"><%= anuncio.precio %>€</td>
+                    <td>
+                        <div class="foto_anuncio-container">
+                            <img
+                                class="foto_anuncio"
+                                src="/images/<%= anuncio.foto %>"
+                            />
+                        </div>
+                    </td>
+                    <td><%= anuncio.tags %></td>
+                    <td><%= anuncio._id %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
     </body>
 </html>
