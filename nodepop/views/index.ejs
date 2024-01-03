@@ -1,41 +1,52 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title><%= title %></title>
-        <link rel="stylesheet" href="/stylesheets/style.css" />
-    </head>
-    <body>
-        <h1><%= __("Bienvenido a") %> <%= title %></h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Venta</th>
-                    <th style="text-align: right">Precio</th>
-                    <th>Foto</th>
-                    <th>Tags</th>
-                    <th>#</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% listaDeAnuncios.forEach(function(anuncio) { %>
-                <tr>
-                    <td><%= anuncio.nombre %></td>
-                    <td><%= anuncio.venta ? 'Si' : 'No' %></td>
-                    <td style="text-align: right"><%= anuncio.precio %>€</td>
-                    <td>
-                        <div class="foto_anuncio-container">
-                            <img
-                                class="foto_anuncio"
-                                src="/images/<%= anuncio.foto %>"
-                            />
-                        </div>
-                    </td>
-                    <td><%= anuncio.tags %></td>
-                    <td><%= anuncio._id %></td>
-                </tr>
-                <% }) %>
-            </tbody>
-        </table>
-    </body>
-</html>
+<% include header.ejs %>
+<section class="bg-light" class="main">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6">
+                <!-- Mashead text and app badges-->
+                <div class="mb-5 mb-lg-0 text-center text-lg-start">
+                    <h1 class="main-title">
+                        <%= __("Bienvenido a") %> <%= title %>
+                    </h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><%= __("Nombre") %></th>
+                                <th><%= __("Selling") %></th>
+                                <th><%= __("Precio") %></th>
+                                <th style="text-align: center">
+                                    <%= __("Foto") %>
+                                </th>
+                                <th><%= __("Etiquetas") %></th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% listaDeAnuncios.forEach(function(anuncio) { %>
+                            <tr>
+                                <td><%= anuncio.nombre %></td>
+                                <td><%= anuncio.venta ? 'Si' : 'No' %></td>
+                                <td style="text-align: right">
+                                    <%= anuncio.precio %>€
+                                </td>
+                                <td>
+                                    <div class="foto_anuncio-container">
+                                        <img
+                                            class="foto_anuncio"
+                                            src="/images/<%= anuncio.foto %>"
+                                        />
+                                    </div>
+                                </td>
+                                <td><%= anuncio.tags %></td>
+                                <td><%= anuncio._id %></td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6"></div>
+        </div>
+    </div>
+</section>
+<% include footer.ejs %>

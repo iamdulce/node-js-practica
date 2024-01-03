@@ -1,5 +1,4 @@
 body {
-    padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -13,6 +12,11 @@ table tr td img {
 
 table tr td {
     padding-right: 30px;
+}
+
+.main-title {
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 .foto_anuncio-container {

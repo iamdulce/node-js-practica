@@ -1,1 +1,13 @@
-{ "Bienvenido a": "Bienvenido a" }
+{
+	"Welcome to": "Bienvenido a",
+	"Name": "Nombre",
+	"Price": "Precio",
+	"Selling": "Venta",
+	"Picture": "Foto",
+	"Tags": "Etiquetas",
+	"Bienvenido a": "Bienvenido a",
+	"Nombre": "Nombre",
+	"Precio": "Precio",
+	"Foto": "Foto",
+	"Etiquetas": "Etiquetas"
+}

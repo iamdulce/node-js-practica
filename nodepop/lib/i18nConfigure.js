@@ -9,6 +9,7 @@ i18n.configure({
     defaultLocale: "en",
     autoReload: true,
     syncFiles: true, //sincroniza info de locales entre todos los JSON
+    cookie: "nodepop-locale", //mira si hay cookies que le indique que idoma debe utilizar, sino usa lo de la cabecera Accept-Language
 });
 
 //para usar en scripts

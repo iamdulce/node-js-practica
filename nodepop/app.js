@@ -27,13 +27,14 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); //Mira en public primero si está un index.
 
 // Rutas del API
+app.use(i18n.init);
 app.use("/api/anuncios", require("./routes/api/anuncios"));
+app.use("/api/change-locale", require("./routes/change-locale"));
 
 // Rutas del website
-app.use(i18n.init);
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 
