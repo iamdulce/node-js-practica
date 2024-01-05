@@ -44,8 +44,8 @@
 
                 <!-- Obtengo los idiomas que definí como locales-->
                 <% getLocales().forEach(locale => { %>
-                <a href="/api/change-locale/<%= locale %>"><%= locale %></a
-                >&nbsp; <% }) %>
+                <a href="/change-locale/<%= locale %>"><%= locale %></a>&nbsp;
+                <% }) %>
 
                 <button
                     class="navbar-toggler"
@@ -78,8 +78,7 @@
                         data-bs-target="#feedbackModal"
                     >
                         <span class="d-flex align-items-center">
-                            <i class="bi-chat-text-fill me-2"></i>
-                            <span class="small">Send Feedback</span>
+                            <span class="small">Login</span>
                         </span>
                     </button>
                 </div>

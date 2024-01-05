@@ -18,11 +18,10 @@
                                     <%= __("Foto") %>
                                 </th>
                                 <th><%= __("Etiquetas") %></th>
-                                <th>#</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <% listaDeAnuncios.forEach(function(anuncio) { %>
+                            <% anuncios.forEach(function(anuncio) { %>
                             <tr>
                                 <td><%= anuncio.nombre %></td>
                                 <td><%= anuncio.venta ? 'Si' : 'No' %></td>
@@ -38,7 +37,6 @@
                                     </div>
                                 </td>
                                 <td><%= anuncio.tags %></td>
-                                <td><%= anuncio._id %></td>
                             </tr>
                             <% }) %>
                         </tbody>

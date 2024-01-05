@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-//Se define Schema de Anuncio
+//1- Se define Schema de Anuncio
 const anuncioSchema = mongoose.Schema({
     nombre: String,
     venta: Boolean,
@@ -19,8 +19,8 @@ anuncioSchema.statics.lista = function (filtro, skip, limit, sort, fields) {
     return query.exec();
 };
 
-//Se crea el modelo de anuncio
+//2- Se crea el modelo de anuncio
 const Anuncio = mongoose.model("Anuncio", anuncioSchema);
 
-// Exportar el modelo de agente (opcional)
+//3- Exportar el modelo de agente (opcional)
 module.exports = Anuncio;

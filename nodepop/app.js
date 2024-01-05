@@ -4,6 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const i18n = require("./lib/i18nConfigure");
+const LangController = require("./controllers/LangController");
+const LoginController = require("./controllers/LoginController");
 
 // Conecta a la bbdd al ejecutar
 require("./lib/connectMongoose");
@@ -23,20 +25,27 @@ app.set("view engine", "ejs");
 
 app.locals.title = "Nodepop";
 
+// middlewares
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public"))); //Mira en public primero si está un index.
 
+app.use(i18n.init); //Ubicarlo antes de donde uso __("")
+
 // Rutas del API
-app.use(i18n.init);
 app.use("/api/anuncios", require("./routes/api/anuncios"));
-app.use("/api/change-locale", require("./routes/change-locale"));
 
 // Rutas del website
+const langController = new LangController();
+const loginController = new LoginController();
+
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
+
+app.get("/change-locale/:locale", langController.changeLocale);
+app.get("login", loginController.index);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

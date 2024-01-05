@@ -44,10 +44,7 @@ router.get("/", async (req, res, next) => {
             fields
         );
 
-        res.render("index", {
-            title: "Nodepop",
-            listaDeAnuncios,
-        });
+        res.json(listaDeAnuncios);
     } catch (err) {
         next(err); //llamada al posible error en caso de darse
     }
