@@ -7,6 +7,7 @@ const anuncioSchema = mongoose.Schema({
     precio: Number,
     foto: String,
     tags: [String],
+    owner: String,
 });
 
 // Métodos

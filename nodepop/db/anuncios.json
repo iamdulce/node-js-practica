@@ -5,42 +5,48 @@
             "venta": true,
             "precio": 230.15,
             "foto": "bici.jpg",
-            "tags": ["lifestyle", "motor"]
+            "tags": ["lifestyle", "motor"],
+            "owner": "admin@example.com"
         },
         {
             "nombre": "Iphone 3GS",
             "venta": false,
             "precio": 50.0,
             "foto": "iphone.jpg",
-            "tags": ["lifestyle", "mobile"]
+            "tags": ["lifestyle", "mobile"],
+            "owner": "admin@example.com"
         },
         {
             "nombre": "Teclado mecanico",
             "venta": true,
             "precio": 150.0,
             "foto": "tecladomecanico.jpg",
-            "tags": ["work", "lifestyle"]
+            "tags": ["work", "lifestyle"],
+            "owner": "admin@example.com"
         },
         {
             "nombre": "Mochila",
             "venta": true,
             "precio": 30.0,
             "foto": "mochila.jpg",
-            "tags": ["lifestyle"]
+            "tags": ["lifestyle"],
+            "owner": "user@example.com"
         },
         {
             "nombre": "Patinete electrico",
             "venta": false,
             "precio": 250.0,
             "foto": "patinete.jpg",
-            "tags": ["lifestyle", "motor"]
+            "tags": ["lifestyle", "motor"],
+            "owner": "user@example.com"
         },
         {
             "nombre": "Pixel 4a",
             "venta": true,
             "precio": 155.0,
             "foto": "pixel4a.jpg",
-            "tags": ["lifestyle", "mobile"]
+            "tags": ["lifestyle", "mobile"],
+            "owner": "user@example.com"
         }
     ]
 }
