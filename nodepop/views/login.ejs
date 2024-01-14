@@ -1,0 +1,39 @@
+<% include header.ejs %>
+<!-- Basic features section-->
+<section class="bg-light">
+    <div class="container px-5">
+        <div
+            class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
+        >
+            <form method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                        ><%= __("Email address") %></label
+                    >
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                        name="email"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                        ><%= __("Password") %></label
+                    >
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        name="password"
+                    />
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <%= __("Login") %>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<% include footer.ejs %>

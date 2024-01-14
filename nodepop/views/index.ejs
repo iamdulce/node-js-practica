@@ -12,7 +12,7 @@
                         <thead>
                             <tr>
                                 <th><%= __("Nombre") %></th>
-                                <th><%= __("Selling") %></th>
+                                <th><%= __("En venta") %></th>
                                 <th><%= __("Precio") %></th>
                                 <th style="text-align: center">
                                     <%= __("Foto") %>
@@ -24,7 +24,7 @@
                             <% anuncios.forEach(function(anuncio) { %>
                             <tr>
                                 <td><%= anuncio.nombre %></td>
-                                <td><%= anuncio.venta ? 'Si' : 'No' %></td>
+                                <td><%= anuncio.venta ? 'Sí' : 'No' %></td>
                                 <td style="text-align: right">
                                     <%= anuncio.precio %>€
                                 </td>

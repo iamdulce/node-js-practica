@@ -3,19 +3,14 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const MongoStore = require("connect-mongo");
+const session = require("express-session");
 const i18n = require("./lib/i18nConfigure");
 const LangController = require("./controllers/LangController");
 const LoginController = require("./controllers/LoginController");
 
 // Conecta a la bbdd al ejecutar
 require("./lib/connectMongoose");
-//Probando si funciona la api con promesas
-// const Anuncio = require("./models/Anuncio");
-// Anuncio.find()
-//     .then(results => {
-//         console.log(results);
-//     })
-//     .catch(err => console.log(err));
 
 var app = express();
 
@@ -32,20 +27,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public"))); //Mira en public primero si está un index.
 
-app.use(i18n.init); //Ubicarlo antes de donde uso __("")
-
 // Rutas del API
 app.use("/api/anuncios", require("./routes/api/anuncios"));
 
 // Rutas del website
 const langController = new LangController();
 const loginController = new LoginController();
-
+app.use(i18n.init); //Ubicarlo antes de donde uso __("")
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
-
 app.get("/change-locale/:locale", langController.changeLocale);
-app.get("login", loginController.index);
+app.get("/login", loginController.index);
+app.post("/login", loginController.post);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

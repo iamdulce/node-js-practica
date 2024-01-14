@@ -1,13 +1,11 @@
 {
-	"Welcome to": "Bienvenido a",
-	"Name": "Nombre",
-	"Price": "Precio",
-	"Selling": "Venta",
-	"Picture": "Foto",
-	"Tags": "Etiquetas",
-	"Bienvenido a": "Bienvenido a",
-	"Nombre": "Nombre",
-	"Precio": "Precio",
-	"Foto": "Foto",
-	"Etiquetas": "Etiquetas"
+    "Login": "Acceder",
+    "Bienvenido a": "Bienvenido a",
+    "Nombre": "Nombre",
+    "Precio": "Precio",
+    "Foto": "Foto",
+    "Etiquetas": "Etiquetas",
+    "En venta": "En venta",
+    "Email address": "Dirección de correo electrónico",
+    "Password": "Contraseña"
 }
