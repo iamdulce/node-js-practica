@@ -1,0 +1,46 @@
+{
+    "anuncios": [
+        {
+            "nombre": "Bicicleta",
+            "venta": true,
+            "precio": 230.15,
+            "foto": "bici.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "nombre": "Iphone 3GS",
+            "venta": false,
+            "precio": 50.0,
+            "foto": "iphone.jpg",
+            "tags": ["lifestyle", "mobile"]
+        },
+        {
+            "nombre": "Teclado mecanico",
+            "venta": true,
+            "precio": 150.0,
+            "foto": "tecladomecanico.jpg",
+            "tags": ["work", "lifestyle"]
+        },
+        {
+            "nombre": "Mochila",
+            "venta": true,
+            "precio": 30.0,
+            "foto": "mochila.jpg",
+            "tags": ["lifestyle"]
+        },
+        {
+            "nombre": "Patinete electrico",
+            "venta": false,
+            "precio": 250.0,
+            "foto": "patinete.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "nombre": "Pixel 4a",
+            "venta": true,
+            "precio": 155.0,
+            "foto": "pixel4a.jpg",
+            "tags": ["lifestyle", "mobile"]
+        }
+    ]
+}
