@@ -44,9 +44,11 @@ router.get("/", async (req, res, next) => {
             fields
         );
 
-        res.json(listaDeAnuncios);
-    } catch (err) {
-        next(err); //llamada al posible error en caso de darse
+        res.status(200).json(listaDeAnuncios);
+    } catch (error) {
+        res.status(400).json({
+            msg: error.message,
+        });
     }
 });
 
@@ -56,7 +58,7 @@ router.post("/", async (req, res, next) => {
     try {
         const anuncioData = req.body;
 
-        //Creo instancia de agente en memoria
+        //Creo instancia de anuncio en memoria
         const anuncio = new Anuncio(anuncioData);
 
         //Persistencia(que se guarde) en BBDD

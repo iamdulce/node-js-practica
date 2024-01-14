@@ -1,12 +1,13 @@
 {
-    "Login": "Acceder",
-    "Logout": "Cerrar sesión",
-    "Bienvenido a": "Bienvenido a",
-    "Nombre": "Nombre",
-    "Precio": "Precio",
-    "Foto": "Foto",
-    "Etiquetas": "Etiquetas",
-    "En venta": "En venta",
-    "Email address": "Dirección de correo electrónico",
-    "Password": "Contraseña"
+	"Login": "Acceder",
+	"Logout": "Cerrar sesión",
+	"Bienvenido a": "Bienvenido a",
+	"Nombre": "Nombre",
+	"Precio": "Precio",
+	"Foto": "Foto",
+	"Etiquetas": "Etiquetas",
+	"En venta": "En venta",
+	"Email address": "Dirección de correo electrónico",
+	"Password": "Contraseña",
+	"Invalid credentials": "Invalid credentials"
 }

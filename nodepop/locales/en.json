@@ -8,5 +8,6 @@
 	"Login": "Login",
 	"Email address": "Email address",
 	"Password": "Password",
-	"Logout": "Logout"
+	"Logout": "Logout",
+	"Invalid credentials": "Invalid credentials"
 }

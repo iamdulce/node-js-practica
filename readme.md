@@ -23,11 +23,19 @@ Revisa la conexión a la base de datos en /lib/connectMongoose.js (ver "Iniciar 
 ./bin/mongod --dbpath ./data/
 ```
 
+### Copia .env.example a .env
+
+```sh
+cp .env.example .env
+```
+
+Configura con el nombre de tu bbdd
+
 ### Inicia la BBDD:
 
 ```sh
 # Este comando borra todo lo existente en la bbdd y te crea valores por defecto
-$ npm run init-db
+$ npm run init-db.js
 ```
 
 ### Start
