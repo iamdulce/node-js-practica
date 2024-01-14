@@ -1,4 +1,9 @@
-# Práctica 5 (NodeJs y MongoDB)
+# Práctica 5 y 8 (NodeJs y MongoDB)
+
+NodeJs Básico: hasta el commit f3ad78ace09dcc9201e212682d7aaaffb5def4cb [Status: Completada]
+
+NodeJs Avanzado:
+Status[Incompleta]
 
 ## Nodepop
 
