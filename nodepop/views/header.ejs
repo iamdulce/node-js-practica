@@ -59,23 +59,35 @@
                     Menu
                     <i class="bi-list"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div
+                    class="collapse navbar-collapse log-btns"
+                    id="navbarResponsive"
+                >
+                    <% if (session.usuarioLogado) { %>
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link me-lg-3" href="/">New Add</a>
+                            <a class="nav-link me-lg-3" href="/">New Ad</a>
                         </li>
                     </ul>
-                    <button
+                    <% } %> <% if (!session.usuarioLogado) { %>
+                    <a
+                        href="/login"
                         class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
-                        data-bs-toggle="modal"
-                        data-bs-target="#feedbackModal"
                     >
-                        <a href="/login">
-                            <span class="d-flex align-items-center">
-                                <span class="small"><%= __("Login") %></span>
-                            </span>
-                        </a>
-                    </button>
+                        <span class="d-flex align-items-center">
+                            <span class="small"><%= __("Login") %></span>
+                        </span>
+                    </a>
+                    <% } else { %>
+                    <a
+                        href="/logout"
+                        class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0"
+                    >
+                        <span class="d-flex align-items-center">
+                            <span class="small"><%= __("Logout") %></span>
+                        </span>
+                    </a>
+                    <% } %>
                 </div>
             </div>
         </nav>

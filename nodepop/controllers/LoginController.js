@@ -2,6 +2,7 @@ const Usuario = require("../models/Usuario");
 
 class LoginController {
     index(req, res, next) {
+        (res.locals.error = ""), (res.locals.email = "");
         res.render("login");
     }
 
@@ -20,10 +21,21 @@ class LoginController {
                 return;
             }
 
-            res.redirect("/private");
+            req.session.usuarioLogado = usuario._id;
+            res.redirect("/");
         } catch (err) {
             next(err);
         }
+    }
+
+    logout(req, res, next) {
+        req.session.regenerate(err => {
+            if (err) {
+                next(err);
+                return;
+            }
+            res.redirect("/");
+        });
     }
 }
 

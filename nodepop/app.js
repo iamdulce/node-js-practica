@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const MongoStore = require("connect-mongo");
 const session = require("express-session");
+const sessionAuthMiddleware = require("./lib/sessionAuthMiddleware");
 const i18n = require("./lib/i18nConfigure");
 const LangController = require("./controllers/LangController");
 const LoginController = require("./controllers/LoginController");
@@ -34,11 +35,28 @@ app.use("/api/anuncios", require("./routes/api/anuncios"));
 const langController = new LangController();
 const loginController = new LoginController();
 app.use(i18n.init); //Ubicarlo antes de donde uso __("")
+app.use(
+    session({
+        name: "nodepop-session",
+        secret: "fhw783yh7h2789r2h9842hjt4380",
+        saveUninitialized: true,
+        resave: false,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 2,
+        },
+    })
+);
+app.use((req, res, next) => {
+    res.locals.session = req.session;
+    next();
+});
 app.use("/", require("./routes/index"));
+app.use("/anuncios", sessionAuthMiddleware, require("./routes/index"));
 app.use("/users", require("./routes/users"));
 app.get("/change-locale/:locale", langController.changeLocale);
 app.get("/login", loginController.index);
 app.post("/login", loginController.post);
+app.get("/logout", loginController.logout);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

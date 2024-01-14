@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 //1- Esquema
 const usuarioSchema = mongoose.Schema({
-    email: String,
+    email: { type: String, unique: true },
     password: String,
 });
 
@@ -16,7 +16,7 @@ usuarioSchema.methods.comparePassword = function (passwordEnClaro) {
     return bcrypt.compare(passwordEnClaro, this.password);
 };
 
-//3- Modelo (el modelo se define después de para que pueda incluír el método antes definido)
+//3- Modelo (el modelo se define después para que pueda incluír el método antes definido)
 const Usuario = mongoose.model("Usuario", usuarioSchema);
 
 //Exporto
