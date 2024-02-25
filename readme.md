@@ -8,12 +8,13 @@ Status[Incompleta]
 ----
 ## Despliegue de apps en AWS
 
-#####[Despliegue de app node](http://ec2-34-234-86-140.compute-1.amazonaws.com/)
-#####[Despliegue de app react](http://34.234.86.140/)
+##### [Despliegue de app node](http://ec2-34-234-86-140.compute-1.amazonaws.com/)
+
+##### [Despliegue de app react](http://34.234.86.140/)
 
 Nota para el profe: Puedes verificar en el archivo `styles.css` la cabecera 😁
-----
 
+----
 ## Nodepop
 
 API y website simple
