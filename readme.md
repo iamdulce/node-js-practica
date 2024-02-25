@@ -1,9 +1,18 @@
-# Práctica 5 y 8 (NodeJs y MongoDB)
+# Prácticas (NodeJs y MongoDB)
 
 NodeJs Básico: hasta el commit f3ad78ace09dcc9201e212682d7aaaffb5def4cb [Status: Completada]
 
 NodeJs Avanzado:
 Status[Incompleta]
+
+----
+## Despliegue de apps en AWS
+
+#####[Despliegue de app node](http://ec2-34-234-86-140.compute-1.amazonaws.com/)
+#####[Despliegue de app react](http://34.234.86.140/)
+
+Nota para el profe: Puedes verificar en el archivo `styles.css` la cabecera 😁
+----
 
 ## Nodepop
 
@@ -82,11 +91,3 @@ Filtrar/Ordenar Anuncios:
 -   Orden de Anuncios (Ej: por precio, mayor a menor):
 
 `GET /api/anuncios?sort=-precio`
-
-## Práctica: Configuración de servidores y despliegue de apps
-
-Despliegue de app node: http://ec2-34-234-86-140.compute-1.amazonaws.com/ 
-
-Despliegue de app react: en IP
-
-Nota para el profe: Puedes verificar en el archivo `styles.css` la cabecera 😁
