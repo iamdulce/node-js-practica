@@ -86,6 +86,7 @@ Filtrar/Ordenar Anuncios:
 ## Práctica: Configuración de servidores y despliegue de apps
 
 Despliegue de app node: http://ec2-34-234-86-140.compute-1.amazonaws.com/ 
+
 Despliegue de app react: en IP
 
-Nota para el profe: Puedes verificar en el archivo styles.css la cabecera 😁
+Nota para el profe: Puedes verificar en el archivo `styles.css` la cabecera 😁
